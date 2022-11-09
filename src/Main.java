@@ -22,7 +22,7 @@ public class Main {
         for (int i = 0; i < 3; i++);
         listThree.add(random.nextInt(1000));
 
-
+mapFrom
 
 
 
