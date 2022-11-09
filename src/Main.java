@@ -28,13 +28,13 @@ public class Main {
 
         System.out.println(mapFrom);
 
-        for (var entry : mapFrom.entrySet()) {
+        for (var keySet : mapFrom.keySet()){
             Integer sum = 0;
-            List<Integer> tempList = entry.getValue();
+            List<Integer> tempList = mapFrom.get(keySet);
             for (Integer integerSum : tempList) {
                 sum += integerSum;
             }
-            mapTo.put(entry.getKey(), sum);
+            mapTo.put(keySet, sum);
         }
         System.out.println(mapTo);
 
