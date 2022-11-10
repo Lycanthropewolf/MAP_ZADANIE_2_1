@@ -10,21 +10,33 @@ public class Main {
 
     public static void main(String[] args) {
         Random random = new Random();
-        var listOne = new java.util.ArrayList<>(List.of(1, 2, 4, 5,56));
-        for (int i = 0; i < 3; i++);
+        var listOne = new java.util.ArrayList<>(List.of(1, 2, 4, 5, 56));
+        for (int i = 0; i < 3; i++) ;
         listOne.add(random.nextInt(1000));
 
-        var listTwo = new java.util.ArrayList<>(List.of(4, 8, 65, 71,12));
-        for (int i = 0; i < 3; i++);
+        var listTwo = new java.util.ArrayList<>(List.of(4, 8, 65, 71, 12));
+        for (int i = 0; i < 3; i++) ;
         listTwo.add(random.nextInt(1000));
 
-        var listThree = new java.util.ArrayList<>(List.of(89, 41, 31,78,17));
-        for (int i = 0; i < 3; i++);
+        var listThree = new java.util.ArrayList<>(List.of(89, 41, 31, 78, 17));
+        for (int i = 0; i < 3; i++) ;
         listThree.add(random.nextInt(1000));
 
+        mapFrom.put("LIST 1", listOne);
+        mapFrom.put("LIST 2", listTwo);
+        mapFrom.put("LIST 3", listThree);
 
+        System.out.println(mapFrom);
 
-
+        for (var keySet : mapFrom.keySet()){
+            Integer sum = 0;
+            List<Integer> tempList = mapFrom.get(keySet);
+            for (Integer integerSum : tempList) {
+                sum += integerSum;
+            }
+            mapTo.put(keySet, sum);
+        }
+        System.out.println(mapTo);
 
     }
 }
